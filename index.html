@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alternativa Teatral - Prototipo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="src/img/titulo_app.png" alt="Logo Alternativa Teatral" height="40" class="me-2">
+                <span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="src/pages/cartelera.html">Cartelera</a></li>
+                    <li class="nav-item"><a class="nav-link" href="src/pages/noticias.html">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="src/pages/login.html">Iniciar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section con buscador -->
+    <header class="hero bg-light text-center py-5 mt-5">
+        <div class="container">
+            <h1 class="display-5">Descubrí lo mejor del teatro independiente</h1>
+            <p class="lead">Buscá obras, espacios y artistas</p>
+            <form class="d-flex justify-content-center mt-4" role="search">
+                <input class="form-control w-50 me-2" type="search" placeholder="Buscar obra o espacio..."
+                    aria-label="Buscar">
+                <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Obras destacadas en fila -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Obras destacadas</h2>
+            <div class="d-flex flex-wrap justify-content-start gap-4">
+                <!-- Card 1 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="src/img/hermoso_era_todo.png" class="card-img-top" alt="Obra Que hermoso era todo antes">
+                    <div class="card-body">
+                        <h5 class="card-title">Qué hermoso era todo antes</h5>
+                        <p class="card-text">Una tragicomedia sobre personajes atrapados en sus deseos no cumplidos.
+                            Solo queda observar... y sonreír.</p>
+                        <a href="#" class="btn btn-outline-primary">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="src/img/no_muero.png" class="card-img-top" alt="Obra Las cosas del querer">
+                    <div class="card-body">
+                        <h5 class="card-title">NO ME MUERO</h5>
+                        <p class="card-text">NO ME MUERO es un espectáculo hecho de fragmentos, pedazos de un existir.
+                            Trabajo riesgoso el desear actuar, sin embargo, abre camino para vivir otras vidas, para
+                            olvidar el presente que agobia, para jugar a ser otra, otras..</p>
+                        <a href="#" class="btn btn-outline-primary">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="src/img/ciratura.png" class="card-img-top" alt="Obra El cuerpo de Ofelia">
+                    <div class="card-body">
+                        <h5 class="card-title">CRIATURA</h5>
+                        <p class="card-text">Un día pasa una de esas cosas que mas miedo me da...</p>
+                        <a href="#" class="btn btn-outline-primary">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="src/img/deseos_de_mati.png" class="card-img-top" alt="Obra El cuerpo de Ofelia">
+                    <div class="card-body">
+                        <h5 class="card-title">DESEOS DE MATI</h5>
+                        <p class="card-text">En su cumpleaños, Santi decide salir a buscar los deseos en lugar de sólo
+                            pedirlos.</p>
+                        <a href="#" class="btn btn-outline-primary">Ver más</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Noticias -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="mb-4">Noticias del mundo teatral</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">SER O NO SER: GRAND THEFT HAMLET Y LOS LÍMITES DE LA METAFICCIÓN</h5>
+                            <p class="card-text">¿Qué tienen en común Shakespeare y Grand Theft Auto? A simple vista,
+                                nada. Pero Grand Theft Hamlet propone ese cruce improbable: montar Hamlet dentro del
+                                caótico mundo online del famoso videojuego. Lo que empieza como una rareza viral se
+                                convierte, en realidad, en un documental sobre el proceso de crear teatro en un entorno
+                                virtual, violento y anárquico...</p>
+                            <a href="#" class="btn btn-link">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con redes sociales -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-2">&copy; 2025 Alternativa Teatral · Diseñado para prototipo UX - Elias Escalante</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="text-white fs-4" aria-label="X (Twitter)">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" class="text-white fs-4" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="text-white fs-4" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="text-white fs-4" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector(".navbar-nav");
+
+        const usuario = JSON.parse(localStorage.getItem("usuarioLogueado"));
+
+        if (usuario) {
+            const avatarHTML = `
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+            <img src="${usuario.avatar}" alt="Avatar" class="rounded-circle me-2" width="32" height="32">
+            <span>${usuario.nombre}</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item text-danger" href="#" id="cerrarSesion">Cerrar sesión</a></li>
+            </ul>
+        </li>
+        `;
+
+            // Reemplazar el último ítem del navbar
+            nav.lastElementChild.remove();
+            nav.innerHTML += avatarHTML;
+
+            // Botón cerrar sesión
+            document.getElementById("cerrarSesion").addEventListener("click", () => {
+                localStorage.removeItem("usuarioLogueado");
+                location.reload();
+            });
+        }
+    });
+</script>

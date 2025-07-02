@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iniciar sesión - Alternativa Teatral</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="../img/titulo_app.png" alt="Logo Alternativa Teatral" height="40" class="me-2" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cartelera.html">Cartelera</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Iniciar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5 mt-5" style="max-width: 480px;">
+        <h1 class="mb-4 text-center">Bienvenido</h1>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-4" id="loginTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                    type="button" role="tab">Iniciar sesión</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button"
+                    role="tab">Registrarse</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="loginTabContent">
+            <!-- Login Form -->
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                <form id="loginForm" novalidate>
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="loginEmail" required />
+                        <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="loginPassword" required minlength="6" />
+                        <div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                <form id="registerForm" novalidate>
+                    <div class="mb-3">
+                        <label for="registerName" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="registerName" required minlength="3" />
+                        <div class="invalid-feedback">Ingresa tu nombre completo.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="registerEmail" required />
+                        <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="registerPassword" required minlength="6" />
+                        <div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-2">&copy; 2025 Alternativa Teatral · Diseñado para prototipo UX</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="text-white fs-4" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-white fs-4" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white fs-4" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white fs-4" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Validación básica con Bootstrap y SweetAlert2
+        (() => {
+            "use strict";
+            const forms = document.querySelectorAll("form");
+            forms.forEach((form) => {
+                form.addEventListener(
+                    "submit",
+                    (event) => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        } else {
+                            event.preventDefault();
+
+                            if (form.id === "loginForm") {
+                                Swal.fire({
+                                    title: "¡Bienvenido!",
+                                    text: "Has iniciado sesión correctamente.",
+                                    icon: "success",
+                                    confirmButtonText: "Ir al inicio"
+                                }).then(() => {
+                                    localStorage.setItem(
+                                        "usuarioLogueado",
+                                        JSON.stringify({
+                                            nombre: "Elías",
+                                            avatar: "../img/me.png"
+                                        })
+                                    );
+                                    window.location.href = "../../index.html";
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: "¡Registro exitoso!",
+                                    text: "Ahora podés iniciar sesión con tus datos.",
+                                    icon: "success"
+                                });
+                                form.reset();
+                            }
+                        }
+
+                        form.classList.add("was-validated");
+                    },
+                    false
+                );
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
