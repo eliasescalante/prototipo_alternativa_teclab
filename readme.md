@@ -60,7 +60,7 @@ Se diseñó un guion para pruebas con usuarios que incluía tareas como: buscar 
 
 ## Pages
 
-pages: 
+pages: https://eliasescalante.github.io/prototipo_alternativa_teclab/
 
 ---
 
