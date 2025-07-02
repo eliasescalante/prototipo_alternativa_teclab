@@ -77,7 +77,7 @@ pages: https://eliasescalante.github.io/prototipo_alternativa_teclab/
 ## Contacto
 
 Elías Escalante – [LinkedIn](https://www.linkedin.com/in/elias-escalante/)  
-Correo: deguelelias@gmail.com (modificá por el tuyo)
+Correo: deguelelias@gmail.com
 
 ---
 
